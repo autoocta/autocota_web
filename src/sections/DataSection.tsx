@@ -15,7 +15,7 @@ export const DataSection: React.FC = () => {
         </div>
 
         {/* Data Pipeline Visualization Banner */}
-        <div className="card-glass reveal-on-scroll" style={{ padding: '2.5rem', marginBottom: '3.5rem' }}>
+        <div className="card-glass reveal-on-scroll" style={{ padding: '2rem 1.5rem', marginBottom: '3.5rem' }}>
           <div style={{ fontSize: '0.85rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', fontWeight: 700, marginBottom: '1.5rem' }}>
             // REAL-TIME DATA FLOW TOPOLOGY
           </div>
@@ -26,19 +26,18 @@ export const DataSection: React.FC = () => {
               alignItems: 'center',
               justifyContent: 'space-between',
               flexWrap: 'wrap',
-              gap: '1.25rem'
+              gap: '1rem'
             }}
           >
             {DATA_PIPELINE_FLOW.map((node, idx) => (
               <React.Fragment key={node}>
                 <div
                   style={{
-                    flex: 1,
-                    minWidth: '160px',
+                    flex: '1 1 140px',
                     background: '#f8fafc',
                     border: '1px solid var(--border-subtle)',
                     borderRadius: '10px',
-                    padding: '1.25rem',
+                    padding: '1.15rem 0.85rem',
                     textAlign: 'center'
                   }}
                 >
@@ -52,14 +51,15 @@ export const DataSection: React.FC = () => {
                   >
                     STAGE 0{idx + 1}
                   </div>
-                  <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a' }}>{node}</div>
+                  <div style={{ fontSize: '1rem', fontWeight: 700, color: '#0f172a' }}>{node}</div>
                 </div>
                 {idx < DATA_PIPELINE_FLOW.length - 1 && (
                   <div
                     style={{
                       color: 'var(--accent-cyan)',
                       fontSize: '1.25rem',
-                      fontWeight: 'bold'
+                      fontWeight: 'bold',
+                      padding: '0 0.25rem'
                     }}
                   >
                     ➔

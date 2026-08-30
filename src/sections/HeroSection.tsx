@@ -9,11 +9,11 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
   return (
     <section
-      className="section"
+      className="section hero-section"
       style={{
-        paddingTop: '9.5rem',
-        paddingBottom: '6rem',
-        minHeight: '92vh',
+        paddingTop: 'clamp(6.5rem, 10vw, 9.5rem)',
+        paddingBottom: '4.5rem',
+        minHeight: '88vh',
         display: 'flex',
         alignItems: 'center',
         background: 'radial-gradient(ellipse at 50% 0%, rgba(2, 132, 199, 0.1) 0%, rgba(248, 250, 252, 1) 75%)'
@@ -23,15 +23,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '4rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '3rem',
             alignItems: 'center'
           }}
         >
           {/* Hero Left Content */}
           <div className="reveal-on-scroll is-visible">
             {/* Status Badge */}
-            <div className="section-tag" style={{ marginBottom: '1.5rem' }}>
+            <div className="section-tag" style={{ marginBottom: '1.25rem' }}>
               <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: 'var(--accent-cyan)' }} />
               {HERO_CONTENT.badge}
             </div>
@@ -39,9 +39,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             {/* Main Headline */}
             <h1
               style={{
-                fontSize: 'clamp(2.5rem, 5vw, 4.25rem)',
+                fontSize: 'clamp(2.15rem, 5.5vw, 4.25rem)',
                 fontWeight: 800,
-                lineHeight: 1.1,
+                lineHeight: 1.12,
                 marginBottom: '1.25rem',
                 letterSpacing: '-0.03em',
                 color: '#0f172a'
@@ -54,7 +54,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             {/* Supporting Headline */}
             <h2
               style={{
-                fontSize: '1.25rem',
+                fontSize: 'clamp(1.1rem, 2vw, 1.25rem)',
                 fontWeight: 600,
                 color: 'var(--text-main)',
                 marginBottom: '1.25rem',
@@ -67,18 +67,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             {/* Hero Paragraph */}
             <p
               style={{
-                fontSize: '1.1rem',
+                fontSize: 'clamp(0.975rem, 1.2vw, 1.1rem)',
                 color: 'var(--text-muted)',
-                marginBottom: '2.5rem',
+                marginBottom: '2.25rem',
                 maxWidth: '580px',
-                lineHeight: 1.7
+                lineHeight: 1.68
               }}
             >
               {HERO_CONTENT.paragraph}
             </p>
 
             {/* Action Buttons */}
-            <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <button onClick={onOpenContact} className="btn btn-primary">
                 {HERO_CONTENT.primaryCTA}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -92,7 +92,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           </div>
 
           {/* Hero Right Canvas Animation */}
-          <div className="reveal-on-scroll is-visible" style={{ position: 'relative' }}>
+          <div className="reveal-on-scroll is-visible" style={{ position: 'relative', width: '100%', minHeight: '320px' }}>
             <div
               style={{
                 position: 'absolute',

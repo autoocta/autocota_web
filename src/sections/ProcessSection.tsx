@@ -19,13 +19,13 @@ export const ProcessSection: React.FC = () => {
           {PROCESS_STEPS.map((step) => (
             <div
               key={step.number}
-              className="card-glass reveal-on-scroll"
+              className="card-glass reveal-on-scroll process-card"
               style={{
-                padding: '2rem 2.5rem',
-                display: 'grid',
-                gridTemplateColumns: 'auto 1fr auto',
+                padding: '2rem 2.25rem',
+                display: 'flex',
+                alignItems: 'flex-start',
                 gap: '2rem',
-                alignItems: 'center'
+                flexWrap: 'wrap'
               }}
             >
               {/* Step Number */}
@@ -36,14 +36,14 @@ export const ProcessSection: React.FC = () => {
                   fontWeight: 800,
                   color: 'var(--accent-cyan)',
                   lineHeight: 1,
-                  minWidth: '70px'
+                  minWidth: '60px'
                 }}
               >
                 {step.number}
               </div>
 
               {/* Title & Description */}
-              <div>
+              <div style={{ flex: '1 1 300px' }}>
                 <h3 style={{ fontSize: '1.4rem', marginBottom: '0.4rem', color: '#0f172a' }}>
                   {step.title}
                 </h3>
@@ -53,7 +53,7 @@ export const ProcessSection: React.FC = () => {
               </div>
 
               {/* Deliverables Pills */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', minWidth: '200px' }}>
+              <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                 <span
                   style={{
                     fontSize: '0.75rem',

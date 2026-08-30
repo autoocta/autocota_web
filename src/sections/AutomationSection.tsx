@@ -34,8 +34,8 @@ export const AutomationSection: React.FC = () => {
         </div>
 
         {/* Animated Pipeline Workflow Visual */}
-        <div className="card-glass reveal-on-scroll" style={{ padding: '2.5rem', marginBottom: '3.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
+        <div className="card-glass reveal-on-scroll" style={{ padding: '2rem 1.5rem', marginBottom: '3.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.75rem', flexWrap: 'wrap', gap: '1rem' }}>
             <h3 style={{ fontSize: '1.25rem', fontFamily: 'var(--font-mono)', color: '#0f172a' }}>
               // CONTINUOUS DELIVERY PIPELINE
             </h3>
@@ -44,12 +44,12 @@ export const AutomationSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Workflow Nodes Grid */}
+          {/* Workflow Nodes Grid with Mobile Overflow Scroll */}
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
-              gap: '1rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',
+              gap: '0.85rem',
               alignItems: 'center',
               marginBottom: '2rem'
             }}
@@ -64,7 +64,7 @@ export const AutomationSection: React.FC = () => {
                       background: isActive ? 'rgba(2, 132, 199, 0.08)' : '#f8fafc',
                       border: isActive ? '1px solid var(--accent-cyan)' : '1px solid var(--border-subtle)',
                       borderRadius: '12px',
-                      padding: '1.25rem 0.85rem',
+                      padding: '1.15rem 0.65rem',
                       textAlign: 'center',
                       cursor: 'pointer',
                       boxShadow: isActive ? 'var(--shadow-glow)' : 'none',
@@ -83,12 +83,12 @@ export const AutomationSection: React.FC = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        margin: '0 auto 0.75rem auto'
+                        margin: '0 auto 0.65rem auto'
                       }}
                     >
                       {idx + 1}
                     </div>
-                    <div style={{ fontSize: '0.95rem', fontWeight: 700, color: isActive ? 'var(--accent-cyan)' : '#0f172a' }}>
+                    <div style={{ fontSize: '0.875rem', fontWeight: 700, color: isActive ? 'var(--accent-cyan)' : '#0f172a' }}>
                       {node.name}
                     </div>
                   </div>
@@ -115,7 +115,7 @@ export const AutomationSection: React.FC = () => {
               <span style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', fontWeight: 700 }}>
                 EXECUTING STAGE:
               </span>
-              <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a' }}>
+              <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a' }}>
                 {AUTOMATION_WORKFLOW[activeStep].name} — {AUTOMATION_WORKFLOW[activeStep].detail}
               </div>
             </div>
