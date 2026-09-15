@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { COMPANY_ADDRESS } from '../data/content';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -50,7 +51,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
           borderRadius: '16px',
           padding: '2.5rem',
           boxShadow: '0 25px 50px -12px rgba(15, 23, 42, 0.25)',
-          position: 'relative'
+          position: 'relative',
+          maxHeight: '90vh',
+          overflowY: 'auto'
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -236,6 +239,25 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 Submit Engineering Request
               </button>
             </form>
+
+            <div
+              style={{
+                marginTop: '1.5rem',
+                paddingTop: '1.25rem',
+                borderTop: '1px solid var(--border-subtle)',
+                background: '#f8fafc',
+                borderRadius: '8px',
+                padding: '1rem',
+                fontSize: '0.825rem'
+              }}
+            >
+              <div style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', fontWeight: 700, marginBottom: '0.35rem' }}>
+                OFFICE LOCATION
+              </div>
+              <div style={{ color: 'var(--text-muted)', lineHeight: '1.5' }}>
+                <strong>{COMPANY_ADDRESS.name}</strong>: {COMPANY_ADDRESS.full.replace('AUTOOCTA, ', '')}
+              </div>
+            </div>
           </>
         )}
       </div>

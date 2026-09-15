@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMPANY_ADDRESS } from '../data/content';
 
 export const Footer: React.FC = () => {
   return (
@@ -103,26 +104,40 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Direct Contact */}
+          {/* Direct Contact & Address */}
           <div>
             <h4 style={{ fontSize: '0.9rem', color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', marginBottom: '1.25rem', letterSpacing: '0.05em' }}>
-              CONTACT
+              CONTACT & LOCATION
             </h4>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.925rem', marginBottom: '0.75rem' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.925rem', marginBottom: '0.35rem' }}>
               Engineering Inquiries:
             </p>
             <a
               href="mailto:hello@autoocta.com"
               style={{
-                fontSize: '1rem',
+                fontSize: '0.95rem',
                 color: 'var(--accent-cyan)',
                 fontWeight: 700,
                 fontFamily: 'var(--font-mono)',
-                textDecoration: 'underline'
+                textDecoration: 'underline',
+                display: 'inline-block',
+                marginBottom: '1.25rem'
               }}
             >
               hello@autoocta.com
             </a>
+
+            <div style={{ marginTop: '0.25rem' }}>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-subtle)', fontWeight: 700, fontFamily: 'var(--font-mono)', marginBottom: '0.35rem', letterSpacing: '0.05em' }}>
+                OFFICE LOCATION
+              </p>
+              <address style={{ fontStyle: 'normal', fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>
+                <strong style={{ color: '#0f172a' }}>{COMPANY_ADDRESS.name}</strong><br />
+                {COMPANY_ADDRESS.line1},<br />
+                {COMPANY_ADDRESS.line2},<br />
+                {COMPANY_ADDRESS.city}, {COMPANY_ADDRESS.state} {COMPANY_ADDRESS.pincode}
+              </address>
+            </div>
           </div>
         </div>
 
@@ -141,6 +156,7 @@ export const Footer: React.FC = () => {
           }}
         >
           <div>© 2026 AutoOcta. All rights reserved.</div>
+          <div>{COMPANY_ADDRESS.full}</div>
           <div>autoocta.com</div>
         </div>
       </div>

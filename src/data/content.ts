@@ -284,3 +284,15 @@ export const SOLUTION_CARDS: SolutionCard[] = [
     impact: "70% reduction in internal query response times and 100% data privacy compliance."
   }
 ];
+
+export const COMPANY_ADDRESS = {
+  name: "AUTOOCTA",
+  line1: "3rd Floor, Aragini Bhavan, 2/4",
+  line2: "Dr Rajkumar Rd, Udayam Nagar, Rajajinagar",
+  city: "Bengaluru",
+  state: "Karnataka",
+  pincode: "560021",
+  country: "India",
+  full: "AUTOOCTA, 3rd Floor, Aragini Bhavan, 2/4, Dr Rajkumar Rd, Udayam Nagar, Rajajinagar, Bengaluru, Karnataka 560021"
+};
+

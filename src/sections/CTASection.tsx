@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMPANY_ADDRESS } from '../data/content';
 
 interface CTASectionProps {
   onOpenContact: () => void;
@@ -60,6 +61,27 @@ export const CTASection: React.FC<CTASectionProps> = ({ onOpenContact }) => {
               <a href="#services" className="btn btn-secondary" style={{ padding: '1rem 2.25rem', fontSize: '1.05rem' }}>
                 Explore Our Services
               </a>
+            </div>
+
+            <div
+              style={{
+                marginTop: '2.5rem',
+                paddingTop: '1.5rem',
+                borderTop: '1px solid rgba(15, 23, 42, 0.08)',
+                fontSize: '0.875rem',
+                color: 'var(--text-muted)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                flexWrap: 'wrap'
+              }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" strokeWidth="2">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              <span><strong style={{ color: '#0f172a' }}>Office Address:</strong> {COMPANY_ADDRESS.full}</span>
             </div>
           </div>
         </div>
