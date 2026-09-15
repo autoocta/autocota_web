@@ -14,13 +14,13 @@ export const Footer: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
             gap: '3rem',
             marginBottom: '4rem'
           }}
         >
           {/* Brand Info */}
-          <div style={{ gridColumn: 'span 2' }}>
+          <div style={{ gridColumn: 'span 1' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
               <div
                 style={{
@@ -49,15 +49,14 @@ export const Footer: React.FC = () => {
               style={{
                 fontSize: '1rem',
                 color: 'var(--text-muted)',
-                maxWidth: '320px',
                 lineHeight: '1.6',
-                marginBottom: '1.25rem',
+                marginBottom: '1rem',
                 fontWeight: 600
               }}
             >
               "Modernize. Automate. Build."
             </p>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-subtle)', maxWidth: '340px' }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-subtle)', lineHeight: '1.5' }}>
               Engineering smarter infrastructure, software and AI solutions for the modern enterprise.
             </p>
           </div>
@@ -104,48 +103,63 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Direct Contact & Address */}
+          {/* Direct Contact & Prominent Address Card */}
           <div>
             <h4 style={{ fontSize: '0.9rem', color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', marginBottom: '1.25rem', letterSpacing: '0.05em' }}>
-              CONTACT & LOCATION
+              CONTACT & OFFICE
             </h4>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.925rem', marginBottom: '0.35rem' }}>
-              Engineering Inquiries:
-            </p>
-            <a
-              href="mailto:hello@autoocta.com"
+            
+            <div style={{ marginBottom: '1.25rem' }}>
+              <div style={{ fontSize: '0.85rem', color: 'var(--text-subtle)', marginBottom: '0.25rem', fontWeight: 600 }}>
+                Engineering Inquiries:
+              </div>
+              <a
+                href="mailto:hello@autoocta.com"
+                style={{
+                  fontSize: '1rem',
+                  color: 'var(--accent-cyan)',
+                  fontWeight: 700,
+                  fontFamily: 'var(--font-mono)',
+                  textDecoration: 'underline'
+                }}
+              >
+                hello@autoocta.com
+              </a>
+            </div>
+
+            {/* Address Box */}
+            <div
               style={{
-                fontSize: '0.95rem',
-                color: 'var(--accent-cyan)',
-                fontWeight: 700,
-                fontFamily: 'var(--font-mono)',
-                textDecoration: 'underline',
-                display: 'inline-block',
-                marginBottom: '1.25rem'
+                background: '#f8fafc',
+                border: '1px solid rgba(2, 132, 199, 0.25)',
+                borderRadius: '12px',
+                padding: '1.25rem',
+                boxShadow: '0 4px 12px rgba(15, 23, 42, 0.03)'
               }}
             >
-              hello@autoocta.com
-            </a>
-
-            <div style={{ marginTop: '0.25rem' }}>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-subtle)', fontWeight: 700, fontFamily: 'var(--font-mono)', marginBottom: '0.35rem', letterSpacing: '0.05em' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--accent-cyan)', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', fontWeight: 700, marginBottom: '0.5rem', letterSpacing: '0.05em' }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
                 OFFICE LOCATION
-              </p>
-              <address style={{ fontStyle: 'normal', fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>
-                <strong style={{ color: '#0f172a' }}>{COMPANY_ADDRESS.name}</strong><br />
-                {COMPANY_ADDRESS.line1},<br />
-                {COMPANY_ADDRESS.line2},<br />
-                {COMPANY_ADDRESS.city}, {COMPANY_ADDRESS.state} {COMPANY_ADDRESS.pincode}
+              </div>
+              <address style={{ fontStyle: 'normal', fontSize: '0.875rem', color: '#1e293b', lineHeight: '1.55' }}>
+                <strong style={{ color: '#0f172a', display: 'block', fontSize: '0.95rem', marginBottom: '0.15rem' }}>{COMPANY_ADDRESS.name}</strong>
+                3rd Floor, Aragini Bhavan, 2/4,<br />
+                Dr Rajkumar Rd, Udayam Nagar,<br />
+                Rajajinagar, Bengaluru,<br />
+                Karnataka 560021, India
               </address>
             </div>
           </div>
         </div>
 
-        {/* Bottom Copyright */}
+        {/* Bottom Bar with Full Address Strip */}
         <div
           style={{
             paddingTop: '2rem',
-            borderTop: '1px solid rgba(15, 23, 42, 0.06)',
+            borderTop: '1px solid rgba(15, 23, 42, 0.08)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -156,7 +170,9 @@ export const Footer: React.FC = () => {
           }}
         >
           <div>© 2026 AutoOcta. All rights reserved.</div>
-          <div>{COMPANY_ADDRESS.full}</div>
+          <div style={{ fontWeight: 600, color: '#334155' }}>
+            📍 AUTOOCTA, 3rd Floor, Aragini Bhavan, 2/4, Dr Rajkumar Rd, Udayam Nagar, Rajajinagar, Bengaluru, Karnataka 560021
+          </div>
           <div>autoocta.com</div>
         </div>
       </div>
